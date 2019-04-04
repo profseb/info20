@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aula sobre DIV</title>
+
+	<style type="text/css">
+		
+		div {
+			color:yellow;
+			width:300px;
+			height:200px;
+			position: relative;
+		}
+
+		#blue {
+			background:blue;
+
+		}
+
+		#red {
+			background:red;
+						
+		}
+
+		#green {
+			background:green;
+			position: absolute;
+			top:50px;
+			left:200px;			
+			border:10px solid orange;
+			
+		}
+
+		#pink {
+			width:230px;
+			height: 130px;
+			background-color: pink;
+			color:red;
+			/*padding-left:25px;
+			padding-right:25px;
+			padding-top:25px;
+			padding-bottom:25px;
+			*/
+				  /* top  right bottom left */
+			padding: 25px 15px 15px 25px;
+
+			border:5px solid black;
+			
+			margin-left:10px; /* margem esquerda */
+			margin-top:10px; /* margem superior */
+			margin-bottom:10px; /* margem inferior */
+			margin-right:10px; /* margem direita */
+			margin:10px 10px; /* margem sup/inf esq/dir */
+			margin:10px; /* todas as margens */
+
+		}
+
+		#quadrado {
+			background:cyan;
+			width:150px;
+			height:100px;
+
+		}
+
+		#circulo {
+			width: 400px;
+			height:400px;
+			background-color: black;
+			position: absolute;
+			top:30px;
+			right:100px;
+			border-radius: 50%;
+		}
+		
+
+	</style>
+
+</head>
+<body>
+
+	<div id="blue">
+		Olá, mundo!
+	</div>
+
+	<div id="red">
+		
+		<div id="quadrado">
+
+			Quadrado
+
+		</div>
+
+	</div>
+
+	<div id="green">
+		
+		<div id="pink">
+			Este é um texto bem legalzin, bunitin, só pra gente descontrair
+		</div>
+
+	</div>
+
+	<div id="circulo">
+
+	</div>
+
+</body>
+</html>

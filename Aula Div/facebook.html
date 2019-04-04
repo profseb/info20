@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bate-papo Facebook</title>
+
+	<style type="text/css">
+		
+		#janela {
+
+			position: absolute;
+			bottom:20px;
+			right:20px;
+			background:#D1D1D1;
+			border: 1px solid navy;
+			width:250px;
+			display: none;
+			
+		}
+
+		#janela h2 {
+			margin:0 auto;
+			font:bold 14px arial;
+			padding:10px;
+			background:navy;
+			color:white;
+
+		}
+
+		#mensagens {
+			position: relative;
+			padding:15px;
+			padding-top:0;
+			height:200px;
+			overflow:auto;
+
+		}
+
+		#mensagens p {
+			font:normal 11px arial;
+			background-color: white;
+			padding:10px;
+			margin:5px 0;
+			width:70%;
+			border-radius: 8px;
+			border:1px solid #AAA;
+		}
+
+		#mensagens p.eu {margin-left:20%;}
+		
+		#texto {
+			margin-top:20px;
+			background:blue;
+		}
+
+		#texto textarea {
+			width:180px;
+			padding:10px;
+			height:25px;
+		}
+		#texto input {
+			width:40px;
+			height:50px;
+			vertical-align: top;
+		}
+
+		.fechar {
+			position: absolute;
+			top:8px;
+			right:10px;
+			background:red;
+			color:white;
+			border:0;
+		}
+
+	</style>
+
+</head>
+<body>
+
+
+	<a href="javascript:abrir()">Fulano de Tal</a>
+
+	<div id="janela">
+
+		<h2>Fulano de tal</h2>
+
+		<input type="button" value="X" class="fechar" onclick="fechar()" />
+
+		<div id="mensagens">
+			<p class="eu" id="p1">Oi, Meu amigo!</p>
+			<p class="eu" id="p2">Tudo bem?</p>
+			<p class="outra" id="p3">E aí?</p>
+			<p class="outra" id="p4">Tô de boa!</p>
+			<p class="eu" id="p5">Ki Bom!</p>
+			<p class="eu" id="p6">Oi, Meu amigo!</p>
+			<p class="eu" id="p7">Tudo bem?</p>
+			<p class="outra" id="p8">E aí?</p>
+			<p class="outra" id="p9">Tô de boa!</p>
+			<p class="eu" id="p10">Ki Bom!</p>
+
+		</div>
+		<div id="texto">
+			<textarea id="msg"></textarea>
+			<input type="button" value="OK" onclick="enviar()" />
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		var n = 10;
+		
+		function fechar() {
+
+			document.getElementById("janela").style.display = "none";
+		}
+
+		function abrir() {
+			document.getElementById("janela").style.display = "block";	
+			scroll();
+			
+		}
+
+		function enviar() {
+
+			n++;
+
+			msgs = document.getElementById("mensagens").innerHTML;
+
+			msgs+= '<p class="eu" id="p' + n + '">' + document.getElementById("msg").value +'</p>';
+
+			document.getElementById("mensagens").innerHTML = msgs;
+
+			document.getElementById("msg").value = "";
+
+			scroll();
+
+						
+
+		}
+
+		function scroll() {
+
+			document.getElementById('p'+n).scrollIntoView(false);
+			document.getElementById("msg").focus();
+			
+		}
+
+	</script>
+
+</body>
+</html>
