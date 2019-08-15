@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trabalhando com Responsividade</title>
+	<style type="text/css">		
+		main {margin:0 auto;width:96%;}
+		#blue {background: blue;}
+		#red {background: red;}
+		#yellow {background: yellow;}
+		#green {background: green;}
+		div {height:100px;float:left;margin:0 1%;}
+
+		@media (max-width: 1366px) {
+			div {width:23%;}
+		}
+		@media (max-width: 800px) {
+			div {width:48%;margin-bottom:20px;}
+		}
+		@media (max-width: 420px) {
+			div {width:98%;margin-bottom:20px;}
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<main>
+
+		<div id="blue">Azul</div>
+		<div id="red">Vermelho</div>		
+		<div id="yellow">Amarelo</div>
+		<div id="green">Verde</div>
+
+	</main>
+
+</body>
+</html>
