@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Layout com Bootstrap</title>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+	<style type="text/css">
+		
+				
+
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+			
+		<div class="row">
+				
+			<div class="col col-12 offset-0 offset-md-3 col-md-6">
+				
+				<h2>Meu Formulário</h2>
+
+				<form>
+					
+					<div class="form-row">
+						<div class="form-group col">
+						    <label class="col-form-label" for="nome">Nome</label>
+						    <input type="text" id="nome" class="form-control" placeholder="Seu nome">
+						</div>
+						<div class="form-group col">
+						    <label class="col-form-label" for="sobrenome">Sobrenome</label>
+						    <input type="text" id="sobrenome" class="form-control" placeholder="Seu sobrenome">
+						</div>
+				  	</div>
+
+				  	<div class="form-row">
+						<div class="form-group col">
+						    <label class="col-form-label" for="dia">Dia</label>
+						  	<select id="dia" class="form-control">
+						  		<script type="text/javascript">
+						  			for(var i=1;i<=31;i++) {						  			
+						  				document.writeln("<option>" + ((i < 10) ? "0"+i:i) + "</option>")
+						  			}						  			
+						  		</script>
+						  	</select> 
+
+						</div>
+						<div class="form-group col">
+						    <label class="col-form-label" for="mes">Mês</label>
+						    <select id="mes" class="form-control">
+						    	<option>Janeiro</option>
+						    	<option>Fevereiro</option>
+						    	<option>Março</option>
+						    	<option>Abril</option>
+						    	<option>Maio</option>
+						    	<option>Junho</option>
+						    	<option>Julho</option>
+						    	<option>Agosto</option>
+						    	<option>Setembro</option>
+						    	<option>Outubro</option>
+						    	<option>Novembro</option>
+						    	<option>Dezembro</option>
+						    </select>
+						</div>
+						<div class="form-group col">
+						    <label class="col-form-label" for="ano">Ano</label>
+						    <select id="ano" class="form-control">
+						  		<script type="text/javascript">
+						  			for(var i=2006;i>=1950;i--) {						  			
+						  				document.writeln("<option>" + i + "</option>")
+						  			}						  			
+						  		</script>
+						  	</select> 
+						    
+						</div>
+				  	</div>
+
+				</form>
+
+			</div>
+		
+		</div>
+
+	</div>
+
+</body>
+</html>
