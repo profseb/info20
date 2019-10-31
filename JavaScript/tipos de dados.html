@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aprendendo JavaScript</title>
+
+	<style type="text/css">
+		
+		h1 {background: yellow;}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Aprendendo JavaScript</h1>
+
+	<script type="text/javascript">
+		
+		var a = 1; // typeof retorna number (número)
+		var b; // typeof retorna undefined (indefinido)
+		var c = 7.5; // typeof retorna number (número) - não existe diferença entre inteiro e real
+		var d = "1"; // typeof retorna string (caractere)
+		var e = '1'; // typeof retorna string (caractere)
+		var f = +'1'; // typeof retorna number (número) - tenta converter em número
+		var g = +"1"; // typeof retorna number (número) - tenta converter em número
+		var h = +"Sebastião feio"; // typeof retorna number (número) - tenta converter em número, porém, o valor é NaN (que é um tipo number)
+		var i = 5 > 3; // typeof retorna boolean (lógico) - valor true (verdadeiro)
+		var j = !i; // typeof retorna boolean (lógico) - valor false (falso) - ! negação
+		var k = {}; // typeof retorna Object (objeto)
+		var l = []; // typeof retorna Object (objeto) - trata-se de um Array (vetor)
+		var m = null; // typeof retorna Object (objeto) - trata-se do valor nulo
+		var n = undefined; // typeof retorno undefined (indefinido)
+
+		tipo = typeof(n);
+
+
+		alert("valor = " + n + " / tipo = " + tipo);
+
+
+	</script>
+
+</body>
+</html>
