@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Aprendendo JavaScript</title>
+
+	<style type="text/css">
+		
+		h1 {background: yellow;}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Aprendendo JavaScript</h1>
+
+	Data de Nascimento:
+	<select>
+		<script type="text/javascript">
+		for(var i = 1; i <= 31; i++) {
+
+			//if (i < 10) {
+			//	dia = "0" + i;
+			//} else {
+			//	dia = i;
+			//}
+
+			dia = (i < 10) ? "0"+i:i; // operador ternário
+
+			document.write("<option>" + dia + "</option>");
+		}
+		</script>
+	</select>
+
+	de
+	<select>
+		<script type="text/javascript">
+
+		var meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai','Jun','Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+		for(var i = 0; i < 12; i++) {
+			document.write("<option>" + meses[i] + "</option>");
+		}
+		</script>
+	</select>
+
+	 	de 
+	<select>
+		<script type="text/javascript">
+		for(var i = 1900; i <= 2019; i++) {
+			document.write("<option>" + i + "</option>");
+		}
+		</script>
+	</select>
+
+
+</body>
+</html>
