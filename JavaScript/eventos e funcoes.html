@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Aprendendo JavaScript</title>
+
+	<style type="text/css">
+		
+		h1 {background: yellow;}
+		#div {width:200px;height: 200px;background: red;}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Aprendendo JavaScript</h1>
+
+	<h3>Chamadas de Funções Diretas</h3>
+
+	<input type="button" value="Clique aqui!" onclick="alert('Olá!')" />
+
+	<button onclick="alert('Oi')">Clique aqui também</button>
+
+	<h3>Chamadas de Funções Customizadas</h3>
+
+	<input type="button" value="Clique aqui!" onclick="mensagem('Olá, tudo bem?')" />
+
+	<button onclick="mensagem('Olá, de novo!')">Clique aqui também</button>
+
+	<script type="text/javascript">
+		
+		function mensagem(m) {
+
+			alert(m);
+
+		}
+
+	</script>
+
+	<h3>Entrada de Dados</h3>
+
+	<input type="text" id="texto"/><button onclick="transferir()">Transferir Conteúdo</button>
+
+	<h4>Conteúdo: <span id="conteudo"></span></h4>
+
+	<script type="text/javascript">
+			
+		function transferir() {
+
+			t = document.getElementById('texto');
+
+			document.getElementById('conteudo').innerText = t.value;
+
+		}
+
+
+	</script>
+
+
+	<h3>Outro evento</h3>
+
+	<button onclick="arredondar()">Arredondar</button>
+	<button onclick="aquadradar()">Aquadradar</button>
+	<button onclick="sumir()">Sumir</button>
+	<button onclick="aparecer()">Aparecer</button>
+	<br>
+	<br>
+
+	<div id="div" onmouseover="trocaCor(this, 'yellow')" onmouseout="trocaCor(this, 'red')">
+		Aqui é a div
+	</div>
+
+	<script type="text/javascript">
+		
+		function trocaCor(d, c) {
+
+			d.style.backgroundColor = c;
+
+		}
+
+		function arredondar() {
+
+			d = document.getElementById('div');
+			d.style.borderRadius = '50%';
+
+		}
+
+		function aquadradar() {
+
+			d = document.getElementById('div');
+			d.style.borderRadius = '0';
+
+		}
+
+		function sumir() {
+
+			d = document.getElementById('div');
+			d.style.display = 'none';
+
+		}
+
+		function aparecer() {
+
+			d = document.getElementById('div');
+			d.style.display = 'block';
+
+		}
+
+	</script>
+
+
+</body>
+</html>
